@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+    
+    {% block title %}
+        User Registration System
+    {% endblock %}
+
+    {% block content %}
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Login" class="btn login">
+            <p>
+                Don't have an account? <a href="{% url 'signup' %}" class="form_link">SignUp</a>
+            </p>
+        </form>
+    {% endblock %}
